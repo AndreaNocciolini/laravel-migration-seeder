@@ -1,14 +1,23 @@
 @extends('layouts.base')
 
 @section('content')
-    <?php
-    use Carbon\Carbon;
-    $date = Carbon::now();
-    ?>
+    {{-- <?php
+//use Carbon\Carbon;
+//$date = Carbon::now();
+?> --}}
+
     <main>
         <div>
-            {{-- Print only the daily trains --}}
-            <h1>TRENI ODIERNI</h1>
+
+            {{-- La parte commentata del codice si rifà alla parte commentata nel Train Controller,
+dove prendevo tutti i dati e li passavo a questa pagina e da qui li filtravo in modo da 
+mostrare i dati che partivano oggi e poi tutti i treni. --}}
+
+            {{-- La parte non commentata allo stesso modo si rifà alla parte non commenta in Train Controller,
+dove filtro i dati direttamente nel controller e passo direttamente solo ciò che mi interessa
+alla pagina. --}}
+
+            {{-- <h1>TRENI ODIERNI</h1>
             @foreach ($trains as $train)
                 @if ($train->Data == $date->toDateString())
                     <ul>
@@ -32,10 +41,10 @@
                         @endif
                     </ul>
                 @endif
-            @endforeach
+            @endforeach --}}
 
 
-            <h2>TUTTI I TRENI</h2>
+            <h2>TUTTI I TRENI(DA OGGI IN POI)</h2>
             @foreach ($trains as $train)
                 <ul>
                     <li>{{ $train->Azienda }}</li>
