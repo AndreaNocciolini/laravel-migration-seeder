@@ -45,7 +45,7 @@ alla pagina. --}}
 
 
             <h2>TUTTI I TRENI(DA OGGI IN POI)</h2>
-            <div class="row bg-primary">
+            <div class="row">
                 <div class="col">
                     {{ $trains->links() }} 
                 </div> 

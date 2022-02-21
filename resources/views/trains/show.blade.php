@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-    <h1>DETTAGLI TRENO</h1>
+    <h3>DETTAGLI TRENO</h3>
     <ul>
         <li>{{ $train->Azienda }}</li>
         <li>{{ $train->Stazione_di_partenza }}</li>
