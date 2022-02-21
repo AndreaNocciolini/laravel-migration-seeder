@@ -24,4 +24,9 @@ class TrainController extends Controller
         $data = ['trains' => $trains];
         return view('home', $data);
     }
+
+    public function show(Train $train)
+    {
+        return view('trains.show', ['train'=>$train]);
+    }
 }
