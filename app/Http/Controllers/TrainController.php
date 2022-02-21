@@ -20,7 +20,7 @@ class TrainController extends Controller
 {
     public function index()
     {
-        $trains = Train::where('Data', '>=', Carbon::today()->toDateString())->paginate(15);
+        $trains = Train::where('Data', '>=', Carbon::today()->toDateString())->paginate(16);
         $data = ['trains' => $trains];
         return view('home', $data);
     }
