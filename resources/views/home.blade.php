@@ -45,6 +45,11 @@ alla pagina. --}}
 
 
             <h2>TUTTI I TRENI(DA OGGI IN POI)</h2>
+            <div class="row bg-primary">
+                <div class="col">
+                    {{ $trains->links() }} 
+                </div> 
+            </div>
             @foreach ($trains as $train)
                 <ul>
                     <li>{{ $train->Azienda }}</li>
@@ -68,6 +73,9 @@ alla pagina. --}}
                         <li><a href="{{ route('trains.show', $train) }}">Dettagli Treno</a></li>
                 </ul>
             @endforeach
+        </div>
+        <div>
+            {{ $trains->links() }}
         </div>
     </main>
 @endsection
