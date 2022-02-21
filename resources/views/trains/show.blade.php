@@ -24,7 +24,6 @@
                         <li>Treno Cancellato</li>
                     @else
                     @endif
-                    <li><a href="{{ route('trains.show', $train) }}">Dettagli Treno</a></li>
                 </ul>
             </div>
         </div>
